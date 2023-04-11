@@ -1,8 +1,8 @@
 <?php
 
-require_once("Database.php");
-require_once("header.php");
-require_once("Form.php");
+require_once("class/Database.php");
+require_once("template/header.php");
+require_once("class/Form.php");
 
 class Main
 {
@@ -22,13 +22,13 @@ class Main
 }
 
 $url = [
-    "home" => "home.php",
-    "add" => "add.php",
-    "update" => "update.php",
-    "delete" => "delete.php",
-    "about" => "about.php",
-    "contact" => "contact.php"
+    "home" => "module/home.php",
+    "add" => "module/artikel/add.php",
+    "update" => "module/artikel/update.php",
+    "delete" => "module/artikel/delete.php",
+    "about" => "module/about.php",
+    "contact" => "module/contact.php"
 ];
 $main = new Main($url);
 $main->x(@$_REQUEST["mod"]);
-require_once("footer.php");
+require_once("template/footer.php");
